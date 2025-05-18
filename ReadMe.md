@@ -10,4 +10,4 @@ Files:
 - test.c: test code to this template ( generate "test.png")
 - test.exe: compiled test code
 - build.bat: build test code with tcc
-- wingdip.txt: minimal winapi includes as text list(using in [winapiext-tcc](https://github.com/Lasereyes5/winapiext-tcc "winapiext-tcc"))
+- winapigdip.txt: minimal winapi includes as text list(using in [winapiext-tcc](https://github.com/Lasereyes5/winapiext-tcc "winapiext-tcc"))
