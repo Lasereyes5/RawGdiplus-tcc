@@ -1,7 +1,13 @@
-# winapiext-tcc
-a winapi header completion for Tiny C Compiler to compile win32 programs (also for RawGdiplus)
+# RawGdiplus-tcc
+C language version GDI+, forked to support Tiny C Compiler.
 
-folders:
-- winapiext: just a copy of full winapi headers in [winapi-full-for-0.9.27](http://download.savannah.gnu.org/releases/tinycc/winapi-full-for-0.9.27.zip "winapi-full-for-0.9.27") with windows.h deleted, so that it could directly included as an include path`-Iwinapiext`, to support all winapi features in [Tiny C Compiler](http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip "Tiny C Compiler").
-- winapigdip: minimal winapi support for RawGdiplus
-	- how to create: write a code that uses RawGdiplus(just like [RawGdiplus-tcc](https://github.com/Lasereyes5/RawGdiplus-tcc "RawGdiplus-tcc")) and compile the code with argument`-vv`(also include winapiext), then use some editors clean and sort the pathes listed in output, get the minimal includes to winapiext, and finally use some scripts (like batch script) to copy included winapi headers automatically by read some of minimal includes list, "winapigdip" get!
+Folders:
+- GdipExt: Extension functions for RawGdiplus
+- winapigdip: minimal winapi support for RawGdiplus, created from [winapiext-tcc](https://github.com/Lasereyes5/winapiext-tcc "winapiext-tcc")
+
+Files:
+- tccFix.h: annotations and some macro define completions
+- test.c: test code to this template ( generate "test.png")
+- test.exe: compiled test code
+- build.bat: build test code with tcc
+- wingdip.txt: minimal winapi includes as text list(using in [winapiext-tcc](https://github.com/Lasereyes5/winapiext-tcc "winapiext-tcc"))
